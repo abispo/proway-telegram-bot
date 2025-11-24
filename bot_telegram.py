@@ -40,6 +40,8 @@ async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "%H:%M:%S de %d/%m/%Y"
     )
 
+    logger.info("Mensagem de texto recebida.")
+
     await update.message.reply_text(f"Olá {user_name}. Você digitou '{user_text}'. Agora são {timestamp}.")
 
 bot_app = ApplicationBuilder().bot(AutomacaoProwayBot()).build()
